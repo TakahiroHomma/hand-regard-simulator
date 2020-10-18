@@ -1,0 +1,2 @@
+gcc -o rtrl rtrl.c -O2 -lm -fopenmp -mcmodel=large
+
