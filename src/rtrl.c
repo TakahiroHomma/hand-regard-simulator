@@ -36,7 +36,7 @@
 #define interval_of_backward_pass 10 /* interval of training */                 
 #define INTERVAL_OF_RESTART 1000000
                                 /* interval of outputting restart */
-                                /* file *.wts */
+                                /* file wei*.par */
 
 FILE *fp1,*fp2;
 char *outfile,*weightfile;

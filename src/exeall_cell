@@ -1,0 +1,28 @@
+#! /bin/bash
+
+ls -t -r cell_wei* > filelist
+
+for fname in $(< filelist)
+do
+    cp $fname restart_file
+    /home/src/case1/rtrl
+    ./counttestLL
+    cat out_counttestLL >> resultLL-case1
+done
+
+for fname in $(< filelist)
+do
+    cp $fname restart_file
+    /home/src/case2/rtrl
+    ./counttestLL
+    cat out_counttestLL >> resultLL-case2
+done
+
+for fname in $(< filelist)
+do
+    cp $fname restart_file
+    /home/src/case3/rtrl
+    ./counttestLL
+    cat out_counttestLL >> resultLL-case3
+done
+

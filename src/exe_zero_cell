@@ -1,0 +1,18 @@
+#! /bin/bash
+
+ls -t -r wei* > filelist
+
+for fname in $(< filelist)
+do
+    cp $fname file_weight
+    fname_cut=${fname%.*}
+    echo "$fname_cut"
+    cut_fname_cut=${fname_cut#*i}
+    echo "$cut_fname_cut"
+    echo "$cut_fname_cut" > number_file
+
+    set_zero_cell < number_file
+
+    cp -p cell_file_weight cell_"$fname"
+
+done
